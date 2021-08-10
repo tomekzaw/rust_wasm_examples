@@ -5,10 +5,10 @@ async function main() {
     '{"address":{"city":"Example City","country":"Germany","street":"Example Street"},"age":51,"name":"Bob","siblings":["Alice","Joe"]}';
   console.log(str);
 
-  const obj = wasm.serialize(str);
+  const obj = wasm.parse(str);
   console.log(obj);
 
-  const str2 = wasm.parse(obj);
+  const str2 = wasm.stringify(obj);
   console.log(str2);
 }
 
