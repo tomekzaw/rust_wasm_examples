@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn parse(s: &str) -> JsValue {
-    let mut value: Value = serde_json::from_str(s).unwrap();
+    let value: Value = serde_json::from_str(s).unwrap();
     JsValue::from_serde(&value).unwrap()
 }
 
